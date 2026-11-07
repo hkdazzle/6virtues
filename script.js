@@ -1,4 +1,4 @@
-const whatsappNumber = String(window.LIUSHANCARE_CONFIG?.whatsappNumber || "85254790218").replace(/\D/g, "");
+const whatsappNumber = String(window.LIUSHANCARE_CONFIG?.whatsappNumber || "85296672586").replace(/\D/g, "");
 const languageButtons = document.querySelectorAll("[data-language]");
 const translatableItems = document.querySelectorAll("[data-en][data-zh]");
 const menuButton = document.getElementById("menuButton");
