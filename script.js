@@ -18,7 +18,7 @@ if (contactPhone) {
     : `+${whatsappNumber}`;
 }
 
-let currentLanguage = "en";
+let currentLanguage = "zh";
 
 function setLanguage(language) {
   currentLanguage = language === "zh" ? "zh" : "en";
@@ -32,11 +32,6 @@ function setLanguage(language) {
     button.setAttribute("aria-pressed", String(button.dataset.language === currentLanguage));
   });
 
-  try {
-    localStorage.setItem("liushan-care-language", currentLanguage);
-  } catch (_error) {
-    // The page still works when browser storage is unavailable.
-  }
 }
 
 languageButtons.forEach((button) => {
@@ -98,9 +93,4 @@ quoteForm.addEventListener("submit", (event) => {
 
 document.getElementById("year").textContent = new Date().getFullYear();
 
-try {
-  const savedLanguage = localStorage.getItem("liushan-care-language");
-  if (savedLanguage === "zh") setLanguage("zh");
-} catch (_error) {
-  // Use English when browser storage is unavailable.
-}
+setLanguage("zh");
