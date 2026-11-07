@@ -71,7 +71,7 @@ quoteForm.addEventListener("submit", (event) => {
 
   const formData = new FormData(quoteForm);
   const isChinese = currentLanguage === "zh";
-  const lines = [isChinese ? "你好，六善愛心回收，我想查詢物品回收報價。" : "Hi 六善愛心回收, I'd like an offer."];
+  const lines = ["你好！我想了解六善愛心回收嘅服務，麻煩幫我評估一下回收價錢，唔該😊"];
   const details = [
     [isChinese ? "姓名" : "Name", formData.get("name")],
     [isChinese ? "電話" : "Phone", formData.get("phone")],
