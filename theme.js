@@ -12,18 +12,16 @@
     root.dataset.theme = isDark ? "dark" : "light";
     toggle.setAttribute("aria-pressed", String(isDark));
     icon.textContent = isDark ? "☀" : "☾";
-    const englishLabel = isDark ? "Light" : "Dark";
-    const cantoneseLabel = isDark ? "亮色" : "暗色";
+    const englishLabel = isDark ? "Dark" : "Light";
+    const cantoneseLabel = isDark ? "暗色" : "亮色";
     if (label) {
       label.dataset.en = englishLabel;
       label.dataset.zh = cantoneseLabel;
       label.textContent = root.lang === "zh-HK" ? cantoneseLabel : englishLabel;
     }
-    const actionLabel = isDark
-      ? "Switch to light mode / 切換至亮色模式"
-      : "Switch to dark mode / 切換至暗色模式";
-    toggle.setAttribute("aria-label", actionLabel);
-    toggle.title = actionLabel;
+    const modeLabel = isDark ? "Dark mode / 暗色模式" : "Light mode / 亮色模式";
+    toggle.setAttribute("aria-label", modeLabel);
+    toggle.title = modeLabel;
     if (colorMeta) colorMeta.content = isDark ? "#0B1220" : "#173B70";
 
     if (save) {
